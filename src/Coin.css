@@ -34,17 +34,19 @@
 
 .coin-symbol {
   text-transform: uppercase;
+  width: 150px;
+  text-align: left;
 }
 
 .coin-data {
   display: flex;
-  text-align: right;
+  text-align: center;
   justify-content: space-between;
-  width: 100%;
+  width: 150%;
 }
 
 .coin-price {
-  width: 110px;
+  width: 100px;
 }
 
 .coin-volume {

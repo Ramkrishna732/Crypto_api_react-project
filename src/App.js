@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React,{ useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+
 import Coin from './Coin';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       )
       .then(res => {
         setCoins(res.data);
-        console.log(res.data);
+      
       })
       .catch(error => console.log(error));
   }, []);
@@ -40,6 +41,10 @@ function App() {
           />
         </form>
       </div>
+      <table>
+        <thead><tr>
+          
+       <th className='coin-symbol'>Currency</th> <th className='coin-symbol'>Symbol</th> <th className='coin-price'>Price</th> <th className='coin-volume'>Volume</th><th className='coin-percent'>Price Change </th><th className='coin-marketcap'>Market Cap</th> </tr></thead></table>
       {filteredCoins.map(coin => {
         return (
           <Coin
