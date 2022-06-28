@@ -11,7 +11,9 @@ const Coin = ({
   priceChange
 }) => {
   return (
+    
     <div className='coin-container'>
+      
       <div className='coin-row'>
         <div className='coin'>
           <img src={image} alt='crypto' />
@@ -23,9 +25,9 @@ const Coin = ({
           <p className='coin-volume'>₹{volume.toLocaleString()}</p>
 
           {priceChange < 0 ? (
-            <p className='coin-percent red'>{priceChange.toFixed(2)}%</p>
+            <p className='coin-percent red'>▼{priceChange.toFixed(2)}%</p>
           ) : (
-            <p className='coin-percent green'>{priceChange.toFixed(2)}%</p>
+            <p className='coin-percent green'>▲{priceChange.toFixed(2)}% </p>
           )}
 
           <p className='coin-marketcap'>
